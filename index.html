@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+    <title>Copier</title>
+</head>
+<body>
+    <h1>Highlighted Text Extractor</h1>
+
+    <div class="container">
+        <p>Paste Here:</p>
+        <input type="text">
+    </div>
+
+    <div id="highlightedWords"></div>
+
+    <script>
+
+        document.getElementById("extract").addEventListener("click", extractHighlightedWords)
+
+        async function extractHighlightedWords() {
+            const textArea = document.getElementById('textInput');
+            const highlightedWordsDiv = document.getElementById('highlightedWords');
+
+            const text = textArea.value;
+
+            // The use of `await` could be relevant if you were making asynchronous calls
+            // For example, if you were fetching data from an API, you might use `await fetch(...)`
+
+            const highlightedWords =0;
+
+            if (highlightedWords.length > 0) {
+                highlightedWordsDiv.innerHTML = `<p>Highlighted Words:</p><ul>${highlightedWords.map(word => `<li>${word}</li>`).join('')}</ul>`;
+            } else {
+                highlightedWordsDiv.innerHTML = '<p>No highlighted words found in the text.</p>';
+            }
+        }
+
+    </script>
+</body>
+</html>
